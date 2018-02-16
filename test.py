@@ -17,3 +17,8 @@ IS400 = np.zeros((16,npoints,5)) #Initialize new 3d array to hold data. note: fi
                             #i.e. main list has 16 elements each of which has 101 smaller elements containing 5 elemnts.
 for i in range(0,16):
     IS400[i,:,:]=importdata[(npoints*i):(npoints*(i+1)) , :] #slice the data into subarrays
+
+def Zr(T): #pulls out Z'
+    return IS400[T,:,3]
+def Zi(T): #pulls out Z''
+    return IS400[T,:,4]
